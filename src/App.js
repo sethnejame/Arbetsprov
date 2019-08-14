@@ -5,7 +5,6 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-<<<<<<< HEAD
       title: "Complete Arbetsprov TaskList Challenge",
       status: "active",
       completed: false
