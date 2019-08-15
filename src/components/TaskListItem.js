@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 function TaskListItem(props) {
   return (
     <div className="taskListItem" style={crossOut(props)}>
-      {props.taskList.title}
+      <p>
+        <input type="checkbox" />{" "}
+        {props.taskList.title}
+      </p>
     </div>
   );
 }
