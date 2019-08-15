@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function TaskListItem(props) {
   return (
@@ -8,4 +10,7 @@ function TaskListItem(props) {
   );
 }
 
+TaskListItem.propTypes = {
+  taskList: PropTypes.object.isRequired
+};
 export default TaskListItem;
