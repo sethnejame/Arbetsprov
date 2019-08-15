@@ -11,6 +11,14 @@ Deployment of the aforementioned app will be to my GH-Pages App once work on the
 My forked repo can be found here:
 https://github.com/sethnejame/Arbetsprov
 
+## Resources
+
+React JS Crash Course - 2019
+https://www.youtube.com/watch?v=sBws8MSXN7A
+
+Introducing React Hooks
+https://www.youtube.com/watch?time_continue=73&v=mxK8b99iJTg
+
 # Welcome to Mondido
 
 Congratulations on making it this far. Beyond this point lies work satisfaction and great colleagues, but first, you must prove yourself in one last feat of coding prowess to prove your worth. Beyond this brief introductory text lies a somewhat lacking specification to a problem we want you to solve. Mind, the specification was created by a team of management consultants, sold by a dedicated and customer-pleasing team of salespersons lacking in nothing but their total disregard of realistic deadlines and developer frustration levels, to a customer now chomping at the bit to release the feature to thousands of customers. Failure is not an option, and it is up to you to ship this feature and save the world by doing so.
