@@ -29,7 +29,8 @@ a {
   text-decoration: none;
 }
 
-.taskListItem {
+.task {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 5px;
+  border-bottom: 1px #ccc solid;
 }
