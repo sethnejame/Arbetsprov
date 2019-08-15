@@ -10,8 +10,8 @@ context("TaskList", () => {
   });
 
   it("should have multiple list items", () => {
-    cy.get("h3").contains("Complete Arbetsprov TaskList Challenge");
-    cy.get("h3").contains("Get a job offer");
-    cy.get("h3").contains("Drink beer");
+    cy.get("div").contains("Complete Arbetsprov TaskList Challenge");
+    cy.get("div").contains("Get a job offer");
+    cy.get("div").contains("Drink beer");
   });
 });
