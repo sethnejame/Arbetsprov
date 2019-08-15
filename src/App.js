@@ -19,7 +19,7 @@ function App() {
       id: 3,
       title: "Drink beer",
       status: "on hold",
-      completed: false
+      completed: true
     }
   ]);
   return (

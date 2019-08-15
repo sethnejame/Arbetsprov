@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function TaskListItem(props) {
   return (
-    <div>
+    <div className="taskListItem">
       {props.taskList.title}
     </div>
   );
