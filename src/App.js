@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <h1 className="title">Task List</h1>
-      <TaskList tasklist={tasks} />
+      <TaskList taskList={tasks} />
     </div>
   );
 }
