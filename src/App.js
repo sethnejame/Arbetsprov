@@ -10,7 +10,7 @@ function Task({ task, index, completeTask }) {
     >
       {task.title}
       <div>
-        <button onClick={() => completeTask(index)}>Complete</button>
+        <button className="btn" onClick={() => completeTask(index)}>Complete</button>
       </div>
     </div>
   );
@@ -32,10 +32,11 @@ function TaskForm({ addTask }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        className="task"
+        className="taskForm"
         value={value} // state value comes in here
         onChange={e => setValue(e.target.value)} // use the hook to set the new val
-        placeholder="Add new task here. . ."
+        placeholder="Give me a task. . ."
+        autoFocus
       />
     </form>
   );
@@ -82,6 +83,7 @@ function App() {
     <div>
       <h1 className="title">Task List</h1>
       <div className="taskList">
+      <TaskForm addTask={addTask} />
         {tasks.map((task, index) => (
           <Task
             task={task}
@@ -90,7 +92,7 @@ function App() {
             completeTask={completeTask}
           />
         ))}
-        <TaskForm addTask={addTask} />
+       
       </div>
     </div>
   );

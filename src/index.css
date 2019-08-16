@@ -16,11 +16,11 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
   color: white;
 }
 
@@ -31,7 +31,40 @@ a {
 
 .task {
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px;
+  padding: 10px 10px 10px 25px;
   border-bottom: 1px #ccc solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskForm {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 0px 10px 25px;
+  border: 0;
   width: 100%;
+  height: 25px;
+  color: white;
+  border-bottom: 1px #ccc solid;
+}
+
+.title {
+  padding: 10px 10px 10px 25px;
+}
+
+.btn {
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: lightblue;
+  border: 0;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color:#26a0da;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
