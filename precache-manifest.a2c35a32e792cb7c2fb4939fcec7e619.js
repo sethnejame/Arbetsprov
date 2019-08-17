@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b31ace6e755ef4ccaf3dfa1b17317b0",
+    "revision": "028382a4506bec89f05343b4b92b32ac",
     "url": "/Arbetsprov/index.html"
   },
   {
-    "revision": "d52a3fa19ff2b4c756b0",
+    "revision": "b8ebcf953df075f62a7f",
     "url": "/Arbetsprov/static/css/main.4adbb7aa.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arbetsprov/static/js/2.43ca0009.chunk.js"
   },
   {
-    "revision": "d52a3fa19ff2b4c756b0",
-    "url": "/Arbetsprov/static/js/main.ccfb32bc.chunk.js"
+    "revision": "b8ebcf953df075f62a7f",
+    "url": "/Arbetsprov/static/js/main.26f0c0ee.chunk.js"
   },
   {
     "revision": "bbe6cd11287596eb51ce",
