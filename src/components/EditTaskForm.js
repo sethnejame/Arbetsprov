@@ -20,7 +20,7 @@ const EditTaskForm = props => {
     }}>
       <input
         type="text"
-        className="taskForm"
+        className="editTaskForm"
         value={task.title} // state value comes in here
         onChange={handleInputChange} // use the hook to set the new val
       />

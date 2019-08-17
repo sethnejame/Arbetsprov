@@ -7,10 +7,14 @@ Stay tuned for more updates.
 
 ## Deployment
 
-Deployment of the aforementioned app will be to my GH-Pages App once work on the app has been completed. I will also have an open PR with the original branch (belonging to fredrik-mondido) where you can view my progress.
+The deployed 'Task List' app can be visited by following the link below:
+
+https://sethnejame.github.io/Arbetsprov/
+
+I will continue to maintain an open PR with the original branch (belonging to fredrik-mondido) where you can view updates to the task list.
 
 My forked repo can be found here:
-https://github.com/sethnejame/Arbetsprov
+https://github.com/sethnejame/Arbetsprov.git
 
 
 ## Testing
