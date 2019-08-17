@@ -1,20 +1,5 @@
 import React, { useState } from "react";
-
-// component for individual classes
-function Task({ task, index, completeTask }) {
-  return (
-    // ternary operator styles on complete or not
-    <div
-      style={{ textDecoration: task.completed ? "line-through" : "" }}
-      className="task"
-    >
-      {task.title}
-      <div>
-        <button className="btn" onClick={() => completeTask(index)}>Complete</button>
-      </div>
-    </div>
-  );
-}
+import Task from "./components/Task";
 
 // component for adding tasks to list
 function TaskForm({ addTask }) {
@@ -83,7 +68,7 @@ function App() {
     <div>
       <h1 className="title">Task List</h1>
       <div className="taskList">
-      <TaskForm addTask={addTask} />
+        <TaskForm addTask={addTask} />
         {tasks.map((task, index) => (
           <Task
             task={task}
@@ -92,7 +77,6 @@ function App() {
             completeTask={completeTask}
           />
         ))}
-       
       </div>
     </div>
   );
