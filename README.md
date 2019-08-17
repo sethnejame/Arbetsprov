@@ -4,6 +4,7 @@ Brought to you by Seth NeJame. . .this project is currently a work in progress. 
 
 Stay tuned for more updates.
 
+
 ## Deployment
 
 Deployment of the aforementioned app will be to my GH-Pages App once work on the app has been completed. I will also have an open PR with the original branch (belonging to fredrik-mondido) where you can view my progress.
@@ -11,13 +12,30 @@ Deployment of the aforementioned app will be to my GH-Pages App once work on the
 My forked repo can be found here:
 https://github.com/sethnejame/Arbetsprov
 
+
+## Testing
+
+A full test suite for all Task List features is available via Cypress.  
+
+1. Run 'npm install' after you pull down the project in order to install the Cypress dependencies. 
+2. With the project open and your CLI in the root directory, type 'npm run cy:open' to run the Cypress test suite.  
+3. From the pop up window, choose which test you would like to run.
+4. Watch the magic happen.
+
+Please note, the test server runs on localhost:3000. If you forget to ctrl+C out of the testing framework from the CLI as I often do (leaving the server running), and you get an error when you try to boot the test server up again, type 'killall node' in the CLI to kill any open servers and try again.
+
+
 ## Resources
+
+Cypress Documentation
+https://github.com/cypress-io
 
 React JS Crash Course - 2019
 https://www.youtube.com/watch?v=sBws8MSXN7A
 
 Introducing React Hooks
 https://www.youtube.com/watch?time_continue=73&v=mxK8b99iJTg
+
 
 # Welcome to Mondido
 
