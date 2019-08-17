@@ -1,32 +1,40 @@
 import { isContext } from "vm";
 
-describe('Input form', () => {
+describe("Input form", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/");
   });
-  
-  it('focuses input on load', () => {
-    cy.focused()
-      .should('have.class', 'taskForm')
-  })
 
-  it('accepts input', () => {
-    const typedTask = 'Reset the Flux Capacitor'
+  it("focuses input on load", () => {
+    cy.focused().should("have.class", "taskForm");
+  });
 
-    cy.get('.taskForm')
+  it("accepts input", () => {
+    const typedTask = "Reset the Flux Capacitor";
+
+    cy.get(".taskForm")
       .type(typedTask)
-      .should('have.value', typedTask)
-  })
+      .should("have.value", typedTask);
+  });
 
-  context('Form submission', () => {
-    it.only('Adds new task on submit', () => {
-      const addedTask = 'Tune up the MegaCondenser'
+  context("Form submission", () => {
+    it("Adds new task on submit", () => {
+      const addedTask = "Tune up the MegaCondenser";
 
-      cy.get('.taskForm')
+      cy.get(".taskForm")
         .type(addedTask)
-        .type('{enter}')
-      cy.get('.task')
-        .should('contain', addedTask)
-    })
-  })
-})
+        .type("{enter}");
+      cy.get(".task").should("contain", addedTask);
+    });
+  });
+
+  context("Delete task", () => {
+    it.only("removes task w/ Delete button", () => {
+      cy.contains("Delete").click();
+      cy.get(".task").should(
+        "not.contain",
+        "Complete Arbetsprov TaskList Challenge"
+      );
+    });
+  });
+});

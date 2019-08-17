@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 // component for individual classes
-function Task({ task, index, completeTask }) {
+function Task({ task, index, completeTask, deleteTask }) {
   return (
     // ternary operator styles on complete or not
     <div
@@ -10,7 +10,12 @@ function Task({ task, index, completeTask }) {
     >
       {task.title}
       <div>
-        <button className="btn" onClick={() => completeTask(index)}>Complete</button>
+        <button className="btn" onClick={() => completeTask(index)}>
+          Complete
+        </button>
+        <button className="btn" onClick={() => deleteTask(index)}>
+          Delete
+        </button>
       </div>
     </div>
   );
