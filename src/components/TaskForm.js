@@ -19,7 +19,7 @@ function TaskForm({ addTask }) {
         className="taskForm"
         value={value} // state value comes in here
         onChange={e => setValue(e.target.value)} // use the hook to set the new val
-        placeholder="Give me a task. . ."
+        placeholder="Add task. . ."
         autoFocus
       />
     </form>

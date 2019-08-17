@@ -1,30 +1,54 @@
 import React, { useState } from "react";
 import Task from "./components/Task";
 import TaskForm from "./components/TaskForm";
+import EditTaskForm from "./components/EditTaskForm";
 
 // HOC component
 function App() {
   // hooks w/ state for tasks
   const [tasks, setTasks] = useState([
     {
-      id: 1,
+      id: 0,
       title: "Complete Arbetsprov TaskList Challenge",
       status: "active",
       completed: false
     },
     {
-      id: 2,
+      id: 1,
       title: "Get a job offer",
       status: "on hold",
       completed: false
     },
     {
-      id: 3,
+      id: 2,
       title: "Drink beer",
       status: "on hold",
       completed: true
     }
   ]);
+
+  const [editing, setEditing] = useState(false);
+
+  const initialFormState = { id: null, title: "", status: "", completed: null };
+
+  const [currentTask, setCurrentTask] = useState(initialFormState);
+
+  const updateTask = (id, updatedTask) => {
+    setEditing(false);
+
+    setTasks(tasks.map(task => (task.id === id ? updatedTask : task)));
+  };
+
+  const editTask = task => {
+    setEditing(true);
+
+    setCurrentTask({
+      id: task.id,
+      title: task.title,
+      status: task.status,
+      completed: task.completed
+    });
+  };
 
   const completeTask = index => {
     const newTasks = [...tasks];
@@ -34,7 +58,10 @@ function App() {
 
   // send new task props to TaskForm via addTask
   const addTask = text => {
-    const newTasks = [...tasks, { title: text }];
+    const newTasks = [
+      ...tasks,
+      { id: tasks.length + 1, title: text, status: "on hold", completed: false }
+    ];
     setTasks(newTasks);
   };
 
@@ -49,7 +76,16 @@ function App() {
     <div>
       <h1 className="title">Task List</h1>
       <div className="taskList">
-        <TaskForm addTask={addTask} />
+        {editing ? (
+          <EditTaskForm
+            editing={editing}
+            setEditing={setEditing}
+            currentTask={currentTask}
+            updateTask={updateTask}
+          />
+        ) : (
+          <TaskForm addTask={addTask} />
+        )}
         {tasks.map((task, index) => (
           <Task
             task={task}
@@ -57,6 +93,7 @@ function App() {
             index={index}
             completeTask={completeTask}
             deleteTask={deleteTask}
+            editTask={editTask}
           />
         ))}
       </div>
