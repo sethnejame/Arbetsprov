@@ -40,19 +40,23 @@ function App() {
   };
 
   const editTask = task => {
-    setEditing(true);
+    if (editing === false) {
+      setEditing(true);
 
-    setCurrentTask({
-      id: task.id,
-      title: task.title,
-      status: task.status,
-      completed: task.completed
-    });
+      setCurrentTask({
+        id: task.id,
+        title: task.title,
+        status: task.status,
+        completed: task.completed
+      });
+    } else {
+      setEditing(false);
+    }
   };
 
   const completeTask = index => {
     const newTasks = [...tasks];
-    newTasks[index].completed = true;
+    newTasks[index].completed = !newTasks[index].completed;
     setTasks(newTasks);
   };
 
