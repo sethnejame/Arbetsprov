@@ -11,7 +11,6 @@ function App() {
       id: 0,
       title: "Complete Arbetsprov TaskList Challenge",
       status: "Active",
-      completed: false,
       complexity: 5
     },
     {
@@ -24,6 +23,18 @@ function App() {
       id: 2,
       title: "Drink beer",
       status: "Completed",
+      complexity: 5
+    },
+    {
+      id: 3,
+      title: "Refactor code",
+      status: "Active",
+      complexity: 5
+    },
+    {
+      id: 4,
+      title: "Write tests for remaining items",
+      status: "Deleted",
       complexity: 5
     }
   ]);
@@ -80,7 +91,7 @@ function App() {
   const addTask = text => {
     const newTasks = [
       ...tasks,
-      { id: tasks.length + 1, title: text, status: "Pending", completed: false }
+      { id: tasks.length + 1, title: text, status: "Pending", complexity: 5 }
     ];
     setTasks(newTasks);
   };
@@ -113,7 +124,10 @@ function App() {
         ) : (
           <TaskForm addTask={addTask} />
         )}
+
+        <h3 className="subtitle">Active</h3>
         {tasks.map((task, index) => (
+          task.status === "Active" ?
           <Task
             task={task}
             key={index}
@@ -122,8 +136,48 @@ function App() {
             deleteTask={deleteTask}
             editTask={editTask}
             toggleComp={toggleComp}
-          />
+          /> : ""
         ))}
+        <h3 className="subtitle">Completed</h3>
+        {tasks.map((task, index) => (
+          task.status === "Completed" ?
+          <Task
+            task={task}
+            key={index}
+            index={index}
+            toggleStatus={toggleStatus}
+            deleteTask={deleteTask}
+            editTask={editTask}
+            toggleComp={toggleComp}
+          /> : ""
+        ))}
+        <h3 className="subtitle">Pending</h3>
+        {tasks.map((task, index) => (
+          task.status === "Pending" ?
+          <Task
+            task={task}
+            key={index}
+            index={index}
+            toggleStatus={toggleStatus}
+            deleteTask={deleteTask}
+            editTask={editTask}
+            toggleComp={toggleComp}
+          /> : ""
+        ))}
+        <h3 className="subtitle">Deleted</h3>
+        {tasks.map((task, index) => (
+          task.status === "Deleted" ?
+          <Task
+            task={task}
+            key={index}
+            index={index}
+            toggleStatus={toggleStatus}
+            deleteTask={deleteTask}
+            editTask={editTask}
+            toggleComp={toggleComp}
+          /> : ""
+        ))}
+
       </div>
     </div>
   );

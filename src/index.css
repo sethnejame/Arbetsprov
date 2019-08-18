@@ -56,6 +56,11 @@ a {
   padding: 10px 10px 10px 25px;
 }
 
+.subtitle {
+  margin: 5px;
+  padding: 10px 10px 10px 25px;
+}
+
 .btn {
   color: white;
   font-size: 10px;
