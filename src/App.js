@@ -11,19 +11,22 @@ function App() {
       id: 0,
       title: "Complete Arbetsprov TaskList Challenge",
       status: "active",
-      completed: false
+      completed: false,
+      complexity: 5
     },
     {
       id: 1,
       title: "Get a job offer",
       status: "on hold",
-      completed: false
+      completed: false,
+      complexity: 5
     },
     {
       id: 2,
       title: "Drink beer",
       status: "on hold",
-      completed: true
+      completed: true,
+      complexity: 5
     }
   ]);
 
@@ -75,6 +78,13 @@ function App() {
     setTasks(newTasks);
   };
 
+  const toggleComp = index => {
+    const newTasks = [...tasks];
+    newTasks[index].complexity += 1;
+    if (newTasks[index].complexity === 11) newTasks[index].complexity = 0;
+    setTasks(newTasks);
+  };
+
   // iterate over current tasks here, display in page, inc. addTask
   return (
     <div>
@@ -98,6 +108,7 @@ function App() {
             completeTask={completeTask}
             deleteTask={deleteTask}
             editTask={editTask}
+            toggleComp={toggleComp}
           />
         ))}
       </div>

@@ -75,6 +75,7 @@ a {
 }
 
 .btn.rnd {
-  border-radius: 10px;
+  border-radius: 12px;
+  width: 20px;
+  heigh: 20px
 }
-
