@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Arbetsprov/static/css/main.812c4f9e.chunk.css",
-    "main.js": "/Arbetsprov/static/js/main.38e20ed3.chunk.js",
-    "main.js.map": "/Arbetsprov/static/js/main.38e20ed3.chunk.js.map",
+    "main.js": "/Arbetsprov/static/js/main.0ff235b1.chunk.js",
+    "main.js.map": "/Arbetsprov/static/js/main.0ff235b1.chunk.js.map",
     "runtime~main.js": "/Arbetsprov/static/js/runtime~main.94f1d80b.js",
     "runtime~main.js.map": "/Arbetsprov/static/js/runtime~main.94f1d80b.js.map",
     "static/js/2.43ca0009.chunk.js": "/Arbetsprov/static/js/2.43ca0009.chunk.js",
     "static/js/2.43ca0009.chunk.js.map": "/Arbetsprov/static/js/2.43ca0009.chunk.js.map",
     "index.html": "/Arbetsprov/index.html",
-    "precache-manifest.7ec7b36aff772c7f45d63b0cb0011c64.js": "/Arbetsprov/precache-manifest.7ec7b36aff772c7f45d63b0cb0011c64.js",
+    "precache-manifest.9776dc3c2653c8c20d693fcc7aa7e312.js": "/Arbetsprov/precache-manifest.9776dc3c2653c8c20d693fcc7aa7e312.js",
     "service-worker.js": "/Arbetsprov/service-worker.js",
     "static/css/main.812c4f9e.chunk.css.map": "/Arbetsprov/static/css/main.812c4f9e.chunk.css.map"
   }
