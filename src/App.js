@@ -28,7 +28,7 @@ function App() {
     {
       id: 3,
       title: "Refactor code",
-      status: "Active",
+      status: "Pending",
       complexity: 5
     },
     {

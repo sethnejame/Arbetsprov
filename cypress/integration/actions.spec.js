@@ -5,9 +5,9 @@ describe("Action buttons work", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  context("Deletes task", () => {
+  context("Removes task", () => {
     it("removes task w/ Delete button", () => {
-      cy.contains("Delete").click();
+      cy.contains("X").click();
       cy.get(".task").should(
         "not.contain",
         "Complete Arbetsprov TaskList Challenge"
@@ -25,12 +25,11 @@ describe("Action buttons work", () => {
     });
   });
 
-  context("Marks complete", () => {
-    it("task has linethrough upon clicking complete", () => {
-      cy.contains("Complete").click();
-      cy.get(".task")
-        .first()
-        .should("have.css", "textDecoration", "line-through solid rgb(255, 255, 255)");
+  context("Toggle status", () => {
+    it("task status changes when toggle status is clicked", () => {
+      cy.contains("Active").click();
+      cy.get(".btn.toggleStatus")
+        .contains("Completed");
     });
   });
 });
