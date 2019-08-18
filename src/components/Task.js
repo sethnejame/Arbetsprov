@@ -12,7 +12,7 @@ function Task({ task, index, toggleStatus, deleteTask, editTask, toggleComp }) {
             ? "rgb(128, 192, 134, 0.3)"
             : task.status === "Active"
             ? "rgba(255, 251, 23, 0.3)"
-            : task.status === "Deleted"
+            : task.status === "Archived"
             ? "rgba(255, 23, 23, 0.2)"
             : ""
       }}

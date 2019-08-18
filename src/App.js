@@ -34,7 +34,7 @@ function App() {
     {
       id: 4,
       title: "Write tests for remaining items",
-      status: "Deleted",
+      status: "Archived",
       complexity: 5
     }
   ]);
@@ -76,7 +76,7 @@ function App() {
         newTasks[index].status = "Completed";
         break;
       case "Completed":
-        newTasks[index].status = "Deleted";
+        newTasks[index].status = "Archived";
         break;
       case "Deleted":
         newTasks[index].status = "Pending";
@@ -98,7 +98,11 @@ function App() {
 
   const deleteTask = index => {
     const newTasks = [...tasks];
-    newTasks.splice(index, 1);
+    if(newTasks[index].status === "Archived") {
+      newTasks.splice(index, 1)
+    } else {
+      alert("Task must be set to 'Archived' first")
+    }
     setTasks(newTasks);
   };
 
@@ -166,7 +170,7 @@ function App() {
         ))}
         <h3 className="subtitle">Deleted</h3>
         {tasks.map((task, index) => (
-          task.status === "Deleted" ?
+          task.status === "Archived" ?
           <Task
             task={task}
             key={index}
