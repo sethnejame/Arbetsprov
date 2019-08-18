@@ -5,7 +5,7 @@ describe("Action buttons work", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  context("Delete task", () => {
+  context("Deletes task", () => {
     it("removes task w/ Delete button", () => {
       cy.contains("Delete").click();
       cy.get(".task").should(
@@ -15,10 +15,10 @@ describe("Action buttons work", () => {
     });
   });
 
-  context("Update task", () => {
+  context("Updates task", () => {
     it("updates task upon clicking edit button", () => {
       cy.contains("Edit").click();
-      cy.get(".editTaskForm")
+      cy.get(".taskForm.edit")
         .type("Testing the edit")
         .type("{enter}");
       cy.get(".task").should("contain", "Testing the edit");
@@ -33,14 +33,4 @@ describe("Action buttons work", () => {
         .should("have.css", "textDecoration", "line-through solid rgb(255, 255, 255)");
     });
   });
-
-  // context("Delete task", () => {
-  //   it.("removes task w/ Delete button", () => {
-  //     cy.contains("Delete").click();
-  //     cy.get(".task").should(
-  //       "not.contain",
-  //       "Complete Arbetsprov TaskList Challenge"
-  //     );
-  //   });
-  // });
 });
