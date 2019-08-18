@@ -28,13 +28,4 @@ describe("Input form", () => {
     });
   });
 
-  context("Delete task", () => {
-    it.only("removes task w/ Delete button", () => {
-      cy.contains("Delete").click();
-      cy.get(".task").should(
-        "not.contain",
-        "Complete Arbetsprov TaskList Challenge"
-      );
-    });
-  });
 });
