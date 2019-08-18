@@ -30,7 +30,7 @@ a {
 }
 
 .task {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 10px 10px 10px 25px;
   border-bottom: 1px #ccc solid;
   display: flex;
@@ -39,7 +39,7 @@ a {
 }
 
 .taskForm {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 10px 0px 10px 25px;
   border: 0;
   width: 100%;
@@ -62,10 +62,14 @@ a {
   padding: 5px;
   margin-left: 5px;
   border-radius: 4px;
-  background-color: lightblue;
+  background-color: rgb(138, 161, 184);
   border: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+}
+
+.btn.toggleStatus {
+  width: 75px;
 }
 
 .btn:hover {
@@ -76,6 +80,6 @@ a {
 
 .btn.rnd {
   border-radius: 12px;
-  width: 20px;
-  heigh: 20px
+  width: 25px;
+  height: 25px
 }

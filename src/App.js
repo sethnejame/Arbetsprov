@@ -10,22 +10,20 @@ function App() {
     {
       id: 0,
       title: "Complete Arbetsprov TaskList Challenge",
-      status: "active",
+      status: "Active",
       completed: false,
       complexity: 5
     },
     {
       id: 1,
       title: "Get a job offer",
-      status: "on hold",
-      completed: false,
+      status: "Pending",
       complexity: 5
     },
     {
       id: 2,
       title: "Drink beer",
-      status: "on hold",
-      completed: true,
+      status: "Completed",
       complexity: 5
     }
   ]);
@@ -50,16 +48,31 @@ function App() {
         id: task.id,
         title: task.title,
         status: task.status,
-        completed: task.completed
+        complexity: 5
       });
     } else {
       setEditing(false);
     }
   };
 
-  const completeTask = index => {
+  const toggleStatus = index => {
     const newTasks = [...tasks];
-    newTasks[index].completed = !newTasks[index].completed;
+    switch (newTasks[index].status) {
+      case "Pending":
+        newTasks[index].status = "Active";
+        break;
+      case "Active":
+        newTasks[index].status = "Completed";
+        break;
+      case "Completed":
+        newTasks[index].status = "Deleted";
+        break;
+      case "Deleted":
+        newTasks[index].status = "Pending";
+        break;
+      default:
+        newTasks[index].status = "Pending";
+    }
     setTasks(newTasks);
   };
 
@@ -67,7 +80,7 @@ function App() {
   const addTask = text => {
     const newTasks = [
       ...tasks,
-      { id: tasks.length + 1, title: text, status: "on hold", completed: false }
+      { id: tasks.length + 1, title: text, status: "Pending", completed: false }
     ];
     setTasks(newTasks);
   };
@@ -105,7 +118,7 @@ function App() {
             task={task}
             key={index}
             index={index}
-            completeTask={completeTask}
+            toggleStatus={toggleStatus}
             deleteTask={deleteTask}
             editTask={editTask}
             toggleComp={toggleComp}
